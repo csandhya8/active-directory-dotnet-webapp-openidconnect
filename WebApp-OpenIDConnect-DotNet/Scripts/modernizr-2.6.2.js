@@ -47,7 +47,7 @@
 
 window.Modernizr = (function( window, document, undefined ) {
 
-    var version = '2.6.2',
+    var version = '3.4.0',
 
     Modernizr = {},
 
