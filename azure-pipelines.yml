@@ -26,7 +26,6 @@ steps:
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-steps:
 
 - task: DotNetCoreCLI@2
   displayName: Publish
@@ -35,7 +34,7 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
     zipAfterPublish: True
-steps:
+
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
